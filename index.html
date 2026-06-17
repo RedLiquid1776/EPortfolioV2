@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marc Piadade</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d10d13dc21.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: mefr3HBKrPkw_e80L,
+      });
+   })();
+</script>
+</head>
+<body>
+    <section id="landing-page">
+        <nav>
+            <figure>
+                <img id="personal-logo"src="assets/icosahedron-icon-2840746-512.png" alt="Icosahedron Icon">
+            </figure>
+            <ul class="nav__link--list">
+                <li class="nav__link">
+                    <a href="" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black">
+                About</a>
+                </li>
+                <li class="nav__link">
+                    <a href="" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black">
+                Projects</a>
+                </li>
+                <li class="nav__link">
+                    <a href="" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black">
+                Contact</a>
+                </li>
+                <li class="nav__link click">
+                    <a href="" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black">
+                <i class="fa-solid fa-circle-half-stroke"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <header class="header">
+            <div class="header__content">
+                <h1 class="title">Hey</h1>
+                <h1 class="title cyan">I'm Marc.</h1>
+                <p class="header__para">I'm a <b class="cyan">Frontend Software Engineer</b> who aims to create web applications with smooth and user-friendly experiences.
+                    <br>
+                    Here's a bit more <b class="cyan">about myself.</b>
+                </p>
+                <div class="social__list">
+                    <a href="https://www.linkedin.com/in/marcus-piadade-8071a83a0/?skipRedirect=true" target="_blank" class="social__link click">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/RedLiquid1776" target="_blank" class="social__link click">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="./assets/Marcus Piadade Resume.docx (1).pdf" target="_blank" class="social__link click">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <button class="mail__btn click" onclick="toggleModal()">
+            <i class="fa-solid fa-envelope"></i>
+        </button>
+        <a href="#projects" class="scroll">
+            <div class="scroll__icon click"></div>
+        </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title--about">Here's a bit more about me.</h3>
+                <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
+                <p class="modal__para">
+                    I'm a 26 year-old <b class="cyan">frontend software engineering</b> student with a drive for webpage development focused around <b class="cyan">smooth and simple user experiences.</b>
+                    <br>
+                    I am consistently looking to better my skills, learning from a <b class="cyan">talented</b> and <b class="cyan">experienced</b> team of mentors who have guided me to where I am today.
+                </p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assets/5847f5c3cef1014c0b5e489d.png" alt="">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="">
+                        <span class="language__name">CSS</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="">
+                        <span class="language__name">JavaScript</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="">
+                        <span class="language__name">React</span>
+                    </figure>
+                </div>
+            </div>
+            <div class="modal__half modal__contact">
+                <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+                <h4 class="modal__sub-title modal__sub-title--contact">I'd love to hear from you!</h4>
+                <form id="contact__form" onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--label">Name</label>
+                        <input type="text" class="input" name="user_name" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Email</label>
+                        <input type="email" class="input" name="user_email" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Message</label>
+                        <textarea type="text" class="input" name="message" required></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">
+                        Send it my way
+                    </button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for reaching out! Looking forward to meeting you soon!
+                </div>
+            </div>
+            <i class="fas fa-times modal__exit click"></i>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+                <h1 class="section__title">
+                    Here is a look at a few <span class="cyan">projects</span> of mine
+                </h1>
+                <ul class="project__list">
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/TreactProjectImage.png" class="project__img" alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Treact Project
+                                </h3>
+                                <h4 class="project__description--sub-title">
+                                    HTML5, CSS
+                                </h4>
+                                <p class="project__description--para">
+                                    One of my first few projects with Frontend Simplified was creating a mockup landing page for a site called "Treact." This was the first project/deployment I had also send through GitHub.
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/RedLiquid1776" target="_blank" class="project__description--link">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                    <a href="https://redliquid1776.github.io/Treact-Project/" target="_blank" class="project__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/libraryprojectimage.png" class="project__img" alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Library Project
+                                </h3>
+                                <h4 class="project__description--sub-title">
+                                    HTML5, CSS, JavaScript
+                                </h4>
+                                <p class="project__description--para">
+                                    Another project that had been done through the courses of Frontend Simplified; This one had introduced me to the beginnings of JavaScript and mobile-friendly, responsive sites.
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/RedLiquid1776" target="_blank" class="project__description--link">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                    <a href="https://redliquid1776.github.io/Project-1_Library/" target="_blank" class="project__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/oldresumeprojectphoto.png" class="project__img" alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Old Resume/E-Portfolio
+                                </h3>
+                                <h4 class="project__description--sub-title">
+                                    HTML5, CSS
+                                </h4>
+                                <p class="project__description--para">
+                                    One of the later projects through Frontend Simplified was the creation of an E-Portfolio. This is where I began learning about keyframe animations and the small details of button responsiveness.
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/RedLiquid1776" target="_blank" class="project__description--link">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                    <a href="https://redliquid1776.github.io/Resume_v1-WIP/" target="_blank" class="project__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row footer__row">
+            <figure class="footer__logo">
+                <img class="footer__logo--img" src="./assets/icosahedron-icon-2840746-512.png" alt="">
+            </figure>
+            <div class="footer__social--list">
+                <a href="" class="
+                footer__social--link
+                link__hover-effect
+                link__hover-effect--white">
+                GitHub
+                </a>
+                <a href="" class="
+                footer__social--link
+                link__hover-effect
+                link__hover-effect--white">
+                LinkedIn
+                </a>
+                <a href="" class="
+                footer__social--link
+                link__hover-effect
+                link__hover-effect--white">
+                Contact
+                </a>
+                <a href="" class="
+                footer__social--link
+                link__hover-effect
+                link__hover-effect--white">
+                Resume
+                </a>
+                </div>
+                <div class="footer__copyright">
+                Copyright © 2026 Marc Piadade
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
