@@ -1,7 +1,3 @@
-// template id: template_ycx0add
-// serivce key: service_452pqhf
-// public key: mefr3HBKrPkw_e80L
-
 let isModalOpen = false;
 let contrastToggle = false;
 const scaleFactor = 1/20;
